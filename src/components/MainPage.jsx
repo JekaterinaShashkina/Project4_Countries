@@ -1,25 +1,25 @@
 import { useState } from "react";
 import MyHomeCountry from "./MyHomeCountry";
-import Countries from "./CountryList";
-import World from "./About";
+import About from "./About";
 import './menu.css'
+import Home from "../pages/Home";
 
-const Menu = () => {
+const MainPage = () => {
     const [activePage, setActivePage] = useState('Home')
 
     let PageComponent
     switch(activePage) {
         case 'Home':
-            PageComponent = Countries;
+            PageComponent = Home;
             break;
         case 'MyHomeCountry':
             PageComponent = MyHomeCountry
             break
         case 'About':
-            PageComponent = World
+            PageComponent = About   
             break
         default:
-            PageComponent=Countries
+            PageComponent=Home
     }
     return (
         <div className="menu-bar">
@@ -44,4 +44,4 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default MainPage
