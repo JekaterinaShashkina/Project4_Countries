@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import CountryCard from "./CountryCard";
 
 function CountryList({ countries }) {
     if (!Array.isArray(countries)) {
@@ -8,30 +9,16 @@ function CountryList({ countries }) {
     if (countries.length === 0) {
         return <p>No countries found.</p>;
     }
-    
+
     return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", justifyContent: "center" }}>
         {countries.map((country) => (
         <Link
             to={`/country/${country.name.common}`}
             key={country.cca3}
-            style={{
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "1rem",
-                width: "200px",
-                textDecoration: "none",
-                color: "black",
-            }}
+            className="card-link"
         >
-        <img
-            src={country.flags.svg}
-            alt={`Flag of ${country.name.common}`}
-            style={{ width: "100%", height: "auto" }}
-          />
-          <h3>{country.name.common}</h3>
-          <p>Capital: {country.capital?.[0] || "N/A"}</p>
-          <p>Population: {country.population.toLocaleString()}</p>
+        <CountryCard key={country.cca3} country={country} />
         </Link>
       ))}
     </div>

@@ -11,3 +11,33 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 2px solid #a5d6a7;
+  background-color: transparent;
+  color: #4caf50;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #e8f5e9;
+}
+
+.pagination .active-page {
+  background-color: #a5d6a7;
+  color: white;
+}
+
+.pagination .active-page:hover {
+  background-color: #81c784;
+}

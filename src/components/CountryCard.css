@@ -1,0 +1,34 @@
+.country-card {
+    width: 220px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border: 2px solid #a5d6a7;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    box-shadow: none;
+  }
+  
+  .country-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .country-flag {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .country-name {
+    font-weight: 600;
+    margin-top: 12px;
+    color: #4caf50;
+  }

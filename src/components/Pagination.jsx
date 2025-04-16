@@ -1,3 +1,4 @@
+
 const Pagination = ({ totalCountries, countriesPerPage, currentPage, setCurrentPage }) => {
     const totalPages = Math.ceil(totalCountries / countriesPerPage);
     const maxVisiblePages = 5;
