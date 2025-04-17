@@ -1,10 +1,15 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Button } from "@mui/material";
 
 function CountryDetail() {
     const { name } = useParams()
     const [country, setCountry] = useState(null)
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+    const handleBack = () => {
+        navigate("/"); // вернёт на главную страницу
+      };
 
     useEffect(() => {
         const fetchCountry = async () => {
@@ -29,6 +34,24 @@ function CountryDetail() {
 
     return (
         <div style={{ padding: "1rem" }}>
+            <Button
+                variant="outlined"
+                onClick={handleBack}
+                sx={{ marginBottom: 2,
+                    borderRadius: "12px",
+                    border: "1px solid #a5d6a7",
+                    color: "#4caf50",
+                    fontWeight: 500,
+                    padding: "8px 16px",
+                    textTransform: "none",
+                    "&:hover": {
+                    backgroundColor: "#a5d6a7",
+                    color: "white",
+                    }
+                }}
+            >
+            ← Back
+            </Button>
             <h2>{country.name.common}</h2>
             <img
             src={country.flags.svg}

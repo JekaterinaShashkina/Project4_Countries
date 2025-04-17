@@ -3,6 +3,7 @@ import SearchBar from '../components/SearchBar'
 import CountryList from '../components/CountryList'
 import Pagination from '../components/Pagination'
 
+
 function Home() {
     const [searchTerm, setSearchTerm] = useState('')
     const [countries, setCountries] = useState([])
@@ -50,21 +51,7 @@ function Home() {
                 countriesPerPage={countriesPerPage}
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}
-                color="success" // или "primary", или кастом
-                sx={{
-                    "& .MuiPaginationItem-root": {
-                    borderRadius: "12px",
-                    border: "1px solid #a5d6a7",
-                    color: "#4caf50",
-                    },
-                    "& .Mui-selected": {
-                    backgroundColor: "#a5d6a7",
-                    color: "white",
-                    "&:hover": {
-                        backgroundColor: "#81c784",
-                    },
-                    },
-                }}
+
             />
         </div>
     )

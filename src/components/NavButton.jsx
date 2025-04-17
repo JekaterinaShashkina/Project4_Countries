@@ -8,7 +8,7 @@ const NavButton = styled(Button)(({ active }) => ({
   padding: "8px 15px",
   border: "1px solid #a5d6a7",
   backgroundColor: active ? "#a5d6a7" : "transparent",
-  color: active ? "white" : "black",
+  color: active ? "white" : "success",
   textTransform: "none",
   transition: "all 0.2s ease-in-out",
   "&:hover": {
