@@ -1,8 +1,8 @@
 import {useState, useEffect } from 'react'
-import SearchBar from '../components/SearchBar'
-import CountryList from '../components/CountryList'
-import Pagination from '../components/Pagination'
-
+import SearchBar from './SearchBar'
+import CountryList from './CountryList'
+import Pagination from './Pagination'
+import { Typography } from '@mui/material'
 
 function Home() {
     const [searchTerm, setSearchTerm] = useState('')
@@ -19,7 +19,6 @@ function Home() {
                     : `https://restcountries.com/v3.1/all`
                 )
                 const data =await response.json()
-
                 if (Array.isArray(data)) {
                     setCountries(data);
                 } else {
@@ -40,7 +39,9 @@ function Home() {
 
     return (
         <div className='countries-page'>
-            <h1>Countries of the world</h1>
+            <Typography variant="h1">
+                Countries of the world
+            </Typography>
             {/* Строка поиска */}
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             {/* Список стран */}

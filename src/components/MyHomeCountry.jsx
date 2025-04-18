@@ -27,7 +27,7 @@
     
       return (
         <div style={{ padding: "1rem" }}>
-          <h2>{country.name.common} — My Home Country 🇪🇪</h2>
+          <h2>{country.name.common} — My Home Country</h2>
           <img src={country.flags.svg} alt={country.name.common} width={200} />
           <p><strong>Capital:</strong> {country.capital?.[0]}</p>
           <p><strong>Population:</strong> {country.population.toLocaleString()}</p>

@@ -1,9 +1,8 @@
 import { useState } from "react";
-import MyHomeCountry from "./MyHomeCountry";
-import About from "./About";
-import './menu.css'
-import Home from "../pages/Home";
-import Header from "./Header";
+import MyHomeCountry from "../components/MyHomeCountry";
+import About from "../components/About";
+import Home from "../components/Home";
+import Header from "../components/Header";
 
 const MainPage = () => {
     const [activePage, setActivePage] = useState('Home')
