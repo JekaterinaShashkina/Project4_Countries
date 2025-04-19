@@ -33,4 +33,23 @@ _Riigi detailvaade_
 _Minu koduriik_  
 ![My Country](./screenshots/koduriik.png)
 
+## kuidas käivitada
+
+1. Klooni repo `git clone https://github.com/JekaterinaShashkina/Project4_Countries.git`
+2. Paigalda sõltuvust `npm install`
+3. Käivita rakendus `npm run dev`
+4. Rakendus avaneb aadressil `http://localhost:5173`.
+
+## Projekti struktuur
+```bash
+src/
+├── components/        # Taaskasutatavad komponendid (Header, CountryCard, jne.)
+├── pages/             # Lehekomponendid (MainPage, CountryDetail)
+├── theme/             # MUI teemaseaded
+├── assets/            # Staatilised failid (taustapildid, lipud)
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
 
