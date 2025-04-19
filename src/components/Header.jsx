@@ -16,10 +16,11 @@ function Header({activePage, setActivePage}) {
         sx={{mt:3, mb: 3}}
     >
     {navItems.map((item) => (
+        
         <NavButton 
         key={item.value} 
         onClick={()=> setActivePage(item.value)}
-        active={activePage === item.value}
+        active={(activePage === item.value)}
         >
             {item.label}
         </NavButton>

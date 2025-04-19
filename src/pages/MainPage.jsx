@@ -24,6 +24,7 @@ const MainPage = () => {
     return (
         <div className="menu-bar">
             <Header activePage={activePage} setActivePage={setActivePage}/>
+            
             <PageComponent/>
         </div>
     )

@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Button, Typography, Box, Grid } from "@mui/material";
-import {CountryInfo} from "../components/CountryInfo"
+import { Button, Typography, Box} from "@mui/material";
+import { CountryInfo} from "../components/CountryInfo"
 
 function CountryDetail() {
     const { name } = useParams()
@@ -60,34 +60,6 @@ function CountryDetail() {
             }}>
                 <Box sx={{ gridColumn: "span 4" }}>
                     <CountryInfo country={country} />
-                    {/* <Box
-                        sx={{
-                        backgroundColor: "rgba(255, 255, 255, 0.85)",
-                        p: 3,
-                        borderRadius: 3,
-                        boxShadow: 2,
-                        }}
-                    >
-                        <Typography variant="h4" fontWeight={600} mb={2}>
-                        {country.name.common}
-                        </Typography>
-                        <img
-                        src={country.flags.svg}
-                        alt={`Flag of ${country.name.common}`}
-                        style={{ width: "100%", maxWidth: "300px", borderRadius: "8px" }}
-                        />
-                        <Typography mt={2}><strong>Capital:</strong> {country.capital}</Typography>
-                        <Typography><strong>Population:</strong> {country.population.toLocaleString()}</Typography>
-                        <Typography><strong>Area:</strong> {country.area} km²</Typography>
-                        <Typography><strong>Languages:</strong> {Object.values(country.languages || {}).join(", ")}</Typography>
-                        <Typography><strong>Currency:</strong> {Object.values(country.currencies || {}).map(c => c.name).join(", ")}</Typography>
-                        <Typography mt={2}>
-                        <strong>Map:</strong>{" "}
-                        <a href={country.maps.googleMaps} target="_blank" rel="noopener noreferrer" style={{ color: "#4caf50" }}>
-                            View on Google Maps
-                        </a>
-                        </Typography>
-                    </Box> */}
                 </Box>
 
                 <Box sx={{ gridColumn: "span 8" }}>

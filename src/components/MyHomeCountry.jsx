@@ -1,4 +1,6 @@
     import { useEffect, useState } from "react";
+    import { CountryInfo } from "./CountryInfo";
+    import { Button, Typography, Box} from "@mui/material";
 
     function MyHomeCountry() {
       const [country, setCountry] = useState(null);
@@ -26,27 +28,39 @@
       if (!country) return <p>Estonia not found</p>;
     
       return (
-        <div style={{ padding: "1rem" }}>
-          <h2>{country.name.common} — My Home Country</h2>
-          <img src={country.flags.svg} alt={country.name.common} width={200} />
-          <p><strong>Capital:</strong> {country.capital?.[0]}</p>
-          <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
-          <p><strong>Area:</strong> {country.area} km²</p>
-          <p><strong>Languages:</strong> {Object.values(country.languages || {}).join(", ")}</p>
-          <p><strong>Currency:</strong> {Object.values(country.currencies || {}).map(c => c.name).join(", ")}</p>
-          <p>
-            <strong>Google Maps:</strong>{" "}
-            <a href={country.maps.googleMaps} target="_blank" rel="noreferrer">
-              Open
-            </a>
-          </p>
-          <iframe
-            src={`https://maps.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}&z=5&output=embed`}
-            width="100%"
-            height="300"
-            style={{ border: "1px solid #ccc", borderRadius: "10px" }}
-          />
-        </div>
+        <Box   sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(12, 1fr)",
+          gap: 2,
+      }}>
+          <Box sx={{ gridColumn: "span 4" }}>
+              <CountryInfo country={country} />
+          </Box>
+
+          <Box sx={{ gridColumn: "span 8" }}>
+              <Box
+                  sx={{
+                  width: "100%",
+                  height: "100%",
+                  minHeight: "400px",
+                  borderRadius: 3,
+                  overflow: "hidden",
+                  boxShadow: 2,
+                  }}
+              >
+                  <iframe
+                      title={`Map of ${country.name.common}`}
+                      src={`https://maps.google.com/maps?q=${country.latlng[0]},${country.latlng[1]}&z=5&output=embed`}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                  />
+              </Box>
+          </Box>
+      </Box>  
       );
     }
 

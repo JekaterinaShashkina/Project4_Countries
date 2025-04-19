@@ -1,25 +1,24 @@
-// src/components/CountryInfo.js
 import { Box, Card, CardContent, Typography } from "@mui/material";
 
-function CountryInfo({ country, title }) {
-  const {capital, population, area, languages, currencies, maps} = country
+export function CountryInfo({ country }) {
+  const {flags, name,  capital, population, area, languages, currencies, maps} = country
   return (
     <Card sx={{ p: 2, borderRadius: 3, boxShadow: 3 }}>
-      {title && (
-        <Typography variant="h5" align="center" sx={{ mb: 2 }}>
-          {title}
-        </Typography>
+      {name.common && (
+        <Typography variant="h5" align="center" sx={{ mb: 2, color: "#568758" }}><strong>
+          {name.common}
+          </strong></Typography>
       )}
 
       <Box sx={{ textAlign: "center", mb: 2 }}>
         <img
-          src={country.flags.svg}
-          alt={`Flag of ${country.name.common}`}
+          src={flags.svg}
+          alt={`Flag of ${name.common}`}
           style={{ width: "60%", borderRadius: 8 }}
         />
       </Box>
 
-      <CardContent>
+      <CardContent sx={{ color: "primary.main" }}>
         <Typography><strong>Capital:</strong> {capital}</Typography>
         <Typography><strong>Population:</strong> {population.toLocaleString()}</Typography>
         <Typography><strong>Area:</strong> {area} km²</Typography>
@@ -41,4 +40,3 @@ function CountryInfo({ country, title }) {
   );
 };
 
-export default CountryInfo;

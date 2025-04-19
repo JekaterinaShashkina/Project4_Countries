@@ -8,7 +8,7 @@ const theme = createTheme({
         fontWeight: 700,
         color: '#568758',
         lineHeight: 1.1,
-        textAlign: 'center', // если нужно центрировать
+        textAlign: 'center', 
       },
   },
   palette: {

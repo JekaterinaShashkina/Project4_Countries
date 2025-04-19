@@ -2,7 +2,9 @@
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
-const NavButton = styled(Button)(({ active }) => ({
+const NavButton = styled(Button, {
+  shouldForwardProp: (prop) => prop !== "active"
+})(({ active }) => ({
   fontSize: "1.1rem",
   borderRadius: "8px",
   padding: "8px 15px",
