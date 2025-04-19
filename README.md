@@ -33,7 +33,7 @@ _Riigi detailvaade_
 _Minu koduriik_  
 ![My Country](./screenshots/koduriik.png)
 
-## kuidas käivitada
+## Kuidas käivitada
 
 1. Klooni repo `git clone https://github.com/JekaterinaShashkina/Project4_Countries.git`
 2. Paigalda sõltuvust `npm install`
@@ -55,4 +55,5 @@ src/
 ## Autor
 
 Loodud Jekaterina Shashkina, 2025
+
 Projekt "Arukad süsteemid ja rakendusinfotehnoloogia" eriala jaoks
