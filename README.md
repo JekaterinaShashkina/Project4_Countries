@@ -27,4 +27,10 @@ Projekt loodi veebiprogrammeerimise kursuse raames ning demonstreerib teadmisi R
 _Avaleht kõigi riikidega_  
 ![Main Page](./screenshots/mainpage.png)
 
+_Riigi detailvaade_  
+![Country Detail](./screenshots/detailvaade.png)
+
+_Minu koduriik_  
+![My Country](./screenshots/koduriik.png)
+
 
