@@ -52,4 +52,7 @@ src/
 └── index.css
 ```
 
+## Autor
 
+Loodud Jekaterina Shashkina, 2025
+Projekt "Arukad süsteemid ja rakendusinfotehnoloogia" eriala jaoks
